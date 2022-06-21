@@ -1,0 +1,821 @@
+/* /=================================== Basic to the codes Start ========================================== \ */
+@font-face {
+  font-family: 'Heebo';
+  src: url("../FONT/Heebo-Bold.ttf");
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 60px;
+}
+
+.container_header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 60px;
+}
+
+:root {
+  --header-text-color: #000000;
+  --main-text-color: #21243D;
+  --main-bg-link-color: #FF6464;
+  --main-link-color: #FFFFFF;
+  --section-bg-color: #EDF7FA;
+  --main-section-link-color: #00A8CC;
+  --main-section-oclock-text-color: #142850;
+  --main-section-oclock-grey-color: #8695A4;
+  --section-border-bottom-color: #E0E0E0;
+
+}
+
+/* /=================================== Basic to the codes End ========================================== \ */
+
+/* /=================================== Header to the codes Start  ========================================== \ */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all .4s linear;
+  background-color: var(--main-link-color);
+}
+
+.header.active {
+  box-shadow: 0 1px 3px var(--header-text-color);
+  background-color: var(--main-link-color);
+}
+
+.header.active .nav {
+  height: 50px;
+  display: flex;
+  transition: all .4s linear;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link {
+  transition: all .2s linear;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link.active {
+  color: var(--main-bg-link-color);
+  transition: all .2s linear;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link:hover {
+  color: var(--main-bg-link-color);
+  transition: all .2s linear;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all .2s linear;
+
+}
+
+.nav .nav__list .nav__item {
+  display: inline-block;
+}
+
+.nav .nav__list .nav__item .nav__link {
+  color: var(--header-text-color);
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 0 15px;
+  transition: all .2s linear;
+}
+
+.nav .nav__list .nav__item .nav__link.active {
+  color: var(--main-bg-link-color);
+}
+
+.nav .nav__list .nav__item .nav__link:hover {
+  color: var(--main-bg-link-color);
+}
+
+.fa-bars {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  display: none;
+}
+
+/* /=================================== Header to the codes End  ========================================== \ */
+
+/* /=================================== Main to the codes End  ========================================== \ */
+.main__container {
+  margin: 150px 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__box_title {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+  color: var(--main-text-color);
+}
+
+.main__box_paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-text-color);
+  margin: 25px 0 35px 0;
+}
+
+.main__box_link {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 2px;
+  color: var(--main-link-color);
+  padding: 10px 15px;
+  background-color: var(--main-bg-link-color);
+  transition: all .2s linear;
+  border: 1px solid var(--main-bg-link-color)
+}
+
+.main__box_link:hover {
+  border: 1px solid var(--main-bg-link-color);
+  background-color: var(--main-link-color);
+  color: var(--main-bg-link-color);
+}
+
+.main__box_img {
+  width: 243px;
+  height: 243px;
+  border-radius: 50%;
+}
+
+/* /=================================== Main to the codes End  ========================================== \ */
+
+/* /=================================== Section-one to the codes Start  ========================================== \ */
+.section__one {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  margin: 60px 0 0 0;
+  background-color: var(--section-bg-color);
+  padding: 25px 0;
+}
+
+.section__container_one {
+  position: relative;
+  margin: 50px 0 200px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.section__box_one_content {
+  width: 490px;
+  height: 295px;
+  background-color: var(--main-link-color);
+  padding: 20px;
+}
+
+.section__box_title {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+}
+
+.section__box_title.active {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 60px;
+  color: var(--main-section-link-color);
+  text-align: right;
+}
+
+.section__box_one_content_box {
+  display: flex;
+  gap: 100px;
+}
+
+.section__box_one_content_title {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: var(--main-text-color);
+}
+
+.section__box_one_content_box_paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--main-text-color);
+  margin: 25px 0;
+}
+
+.section__box_one_content_box_paragraph.active {
+  position: relative;
+}
+
+.section__box_one_content_box_paragraph.active::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--header-text-color);
+  height: 21px;
+  width: 1px;
+  right: -50px;
+}
+
+.section__box_one_content_paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* /=================================== Section-one to the codes End  ========================================== \ */
+
+/* /=================================== Section-two to the codes Start  ========================================== \ */
+.section__two_title {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  margin: 25px 0;
+  color: var(--main-text-color);
+}
+
+.section__box_content_two {
+  display: flex;
+  position: relative;
+  margin: 50px 0;
+}
+
+.section__box_content_two::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--section-border-bottom-color);
+  height: 1px;
+  width: 100%;
+  bottom: -25px;
+}
+
+.section__box_content_two_first_box_oclock {
+  display: flex;
+}
+
+.section__box_content_two_first_box_title {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--main-text-color);
+  margin: 0 20px;
+}
+
+.section__box_content_two_first_box_oclock_paragraph.active {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 1px 10px;
+  border-radius: 16px;
+  color: var(--main-link-color);
+  margin: 20px 20px;
+  background-color: var(--main-section-oclock-text-color);
+}
+
+.section__box_content_two_first_box_oclock_paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 20px 10px;
+  font-size: 20px;
+  line-height: 29px;
+  color: var(--main-section-oclock-grey-color);
+}
+
+.section__box_content_two_first_box_paragraph {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-text-color);
+  margin: 0 20px;
+}
+
+.section__box_content_two img {
+  width: 246px;
+  height: 184px;
+}
+
+/* /=================================== Section-two to the codes End  ========================================== \ */
+
+
+/* /=================================== Footer to the codes End  ========================================== \ */
+.footer {
+  margin: 150px 0 0 0;
+  width: 100%;
+}
+
+.footer__icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--main-text-color);
+  transition: all .2s linear;
+}
+
+.footer__icons i:hover {
+  color: var(--main-bg-link-color);
+}
+
+.footer__paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  margin: 25px 0 50px 0;
+  color: var(--main-text-color);
+}
+
+/* /=================================== Footer to the codes End  ========================================== \ */
+
+/* /=================================== Responsive to the codes Start  ========================================== \ */
+@media (max-width: 1060px) {
+  .section__container_one {
+    position: relative;
+    margin: 50px 0 200px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
+@media (max-width: 970px) {
+  .section__box_content_two_first_box_paragraph {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main__box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 60px;
+    color: var(--main-text-color);
+  }
+
+  .main__box_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-text-color);
+    margin: 25px 0 35px 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .section__box_content_two {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 50px 0;
+    justify-content: center;
+  }
+
+  .section__box_content_two_first_box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 44px;
+    color: var(--main-text-color);
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .section__box_content_two_first_box_paragraph {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .section__box_content_two_first_box_oclock {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 780px) {
+  .main__container {
+    margin: 50px 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  .main__box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    line-height: 45px;
+    margin: 20px 0;
+    color: var(--main-text-color);
+  }
+
+  .main__box_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--main-text-color);
+    margin: 25px 0 35px 0;
+  }
+
+  .main__box {
+    text-align: center;
+  }
+
+  .nav .nav__list .nav__item .nav__link {
+    color: var(--header-text-color);
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 0 15px;
+    display: none;
+    transition: all .2s linear;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+}
+
+@media (max-width: 507px) {
+  .container_header {
+    padding: 0 20px;
+  }
+
+  .main__box_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: var(--main-text-color);
+    margin: 25px 0 35px 0;
+  }
+
+  .main__container {
+    margin: 50px 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__box_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .section__box_one_content {
+    width: 400px;
+    height: 295px;
+    background-color: var(--main-link-color);
+    padding: 20px;
+  }
+
+  .section__box_one_content_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: var(--main-text-color);
+  }
+
+  .section__box_one_content_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section__box_content_two_first_box_paragraph {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  .section__box_content_two_first_box_oclock_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 20px 10px;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--main-section-oclock-grey-color);
+  }
+}
+
+@media (max-width: 415px) {
+  .container_header {
+    padding: 0 20px;
+  }
+
+  .main__container {
+    margin: 50px 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    margin: 20px 0;
+    color: var(--main-text-color);
+  }
+
+  .main__box_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: var(--main-text-color);
+    margin: 15px 0 35px 0;
+  }
+
+  .section__box_one_content {
+    width: 300px;
+    min-height: 295px;
+    background-color: var(--main-link-color);
+    padding: 20px;
+  }
+
+  .section__box_one_content_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--main-text-color);
+  }
+
+  .section__box_one_content_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--main-text-color);
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 20px;
+  }
+
+  .container_header {
+    padding: 0 20px;
+  }
+
+  .main__container {
+    margin: 50px 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    margin: 20px 0;
+    color: var(--main-text-color);
+  }
+
+  .main__box_link {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 2px;
+    color: var(--main-link-color);
+    padding: 10px 15px;
+    background-color: var(--main-bg-link-color);
+    transition: all .2s linear;
+    border: 1px solid var(--main-bg-link-color);
+  }
+
+  .section__box_content_two_first_box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 35px;
+    color: var(--main-text-color);
+    margin: 0;
+    text-align: center;
+  }
+
+  .section__box_content_two_first_box_paragraph {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--main-text-color);
+    margin: 0;
+    text-align: center;
+  }
+
+  .section__box_content_two_first_box_oclock_paragraph {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 20px 10px;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--main-section-oclock-grey-color);
+  }
+}
+
+@media (max-width: 310px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .section__box_one_content {
+    width: 250px;
+    min-height: 370px;
+    background-color: var(--main-link-color);
+    padding: 20px;
+  }
+
+  .main__container {
+    margin: 50px 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* /=================================== Responsive to the codes End  ========================================== \ */
+
+/* /=================================== Secret to the codes End  ========================================== \ */
+.secret__header{
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--main-link-color);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: scale(0);
+  transition: all .4s linear;
+}
+.secret__header_list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.secret__header .fa-times {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.secret__header .secret__header_list .secret__header_item .secret__header_link {
+  font-size: 25px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  font-family: sans-serif;
+  transition: all .2s linear;
+}
+.secret__header .secret__header_list .secret__header_item .secret__header_link.active {
+  color: var(--main-bg-link-color);
+}
+.secret__header .secret__header_list .secret__header_item .secret__header_link:hover{
+  color: var(--main-bg-link-color);
+}
+/* /=================================== Secret to the codes End  ========================================== \ */
