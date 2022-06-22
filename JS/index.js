@@ -10,15 +10,15 @@ let faTimes = document.querySelector(".fa-times");
 
 
 faBars.addEventListener("click",()=>{
-  secretHeader.style.transform = "scale(1.1)";
+  secretHeader.style.transform = "translateX(0)";
 });
 
 faTimes.addEventListener("click",()=>{
-  secretHeader.style.transform = "scale(0)";
+  secretHeader.style.transform = "translateX(-100%)";
 });
 
 secretLink.forEach((item)=>{
   item.addEventListener("click",()=>{
-    secretHeader.style.transform = "scale(0)";
+    secretHeader.style.transform = "translateX(-100%)";
   });
 })
