@@ -20,10 +20,12 @@
   width: 100%;
   max-width: 1140px;
   padding: 0 60px;
+  overflow-x: hidden;
 }
 
 .container_header {
   margin: 0 auto;
+  overflow-x: hidden;
   width: 100%;
   max-width: 1440px;
   padding: 0 60px;

@@ -22,3 +22,5 @@ secretLink.forEach((item)=>{
     secretHeader.style.transform = "translateX(-100%)";
   });
 })
+
+AOS.init();
