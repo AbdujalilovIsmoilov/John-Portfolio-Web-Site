@@ -1,0 +1,369 @@
+/* /=================================== Basic to the codes Start ========================================== \ */
+@font-face {
+  font-family: 'Heebo';
+  src: url("../FONT/Heebo-Bold.ttf");
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 60px;
+  overflow-x: hidden;
+}
+
+.container_header {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 60px;
+}
+
+:root {
+  --header-text-color: #000000;
+  --main-text-color: #21243D;
+  --main-bg-link-color: #FF6464;
+  --main-link-color: #FFFFFF;
+  --section-bg-color: #EDF7FA;
+  --main-section-link-color: #00A8CC;
+  --main-section-oclock-text-color: #142850;
+  --main-section-oclock-grey-color: #8695A4;
+  --section-border-bottom-color: #E0E0E0;
+
+}
+
+/* /=================================== Basic to the codes End ========================================== \ */
+
+/* /=================================== Header to the codes Start  ========================================== \ */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all .4s linear;
+  background-color: var(--main-link-color);
+}
+
+.header.active {
+  box-shadow: 0 1px 3px var(--header-text-color);
+  background-color: var(--main-link-color);
+}
+
+.header.active .nav {
+  height: 50px;
+  display: flex;
+  transition: all .4s linear;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link {
+  transition: all .2s linear;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link.active {
+  color: var(--main-bg-link-color);
+  transition: all .2s linear;
+}
+
+.header.active .nav .nav__list .nav__item .nav__link:hover {
+  color: var(--main-bg-link-color);
+  transition: all .2s linear;
+}
+
+.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all .2s linear;
+
+}
+
+.nav .nav__list .nav__item {
+  display: inline-block;
+}
+
+.nav .nav__list .nav__item .nav__link {
+  color: var(--header-text-color);
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 0 15px;
+  transition: all .2s linear;
+}
+
+.nav .nav__list .nav__item .nav__link.active {
+  color: var(--main-bg-link-color);
+}
+
+.nav .nav__list .nav__item .nav__link:hover {
+  color: var(--main-bg-link-color);
+}
+
+.fa-bars {
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--main-text-color);
+  display: none;
+}
+
+/* /=================================== Header to the codes End  ========================================== \ */
+
+/* /=================================== Section to the codes Start  ========================================== \ */
+.section__content_title {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 60px;
+  color: var(--main-text-color);
+}
+
+.section__content_box {
+  margin: 50px 0;
+  border-bottom: 1px solid var(--section-border-bottom-color);
+  padding: 0 0 25px 0;
+}
+
+.section__content_box_small_box {
+  display: flex;
+  gap: 50px;
+}
+
+.section__content_box_title {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  color: var(--main-text-color);
+
+}
+
+.section__content_box_small_box_paragraph {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--main-text-color);
+  line-height: 29px;
+  margin: 10px 0;
+}
+
+.section__content_box_small_box_paragraph.active {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: var(--main-section-oclock-grey-color);
+  position: relative;
+}
+
+.section__content_box_small_box_paragraph.active::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 21px;
+  background-color: var(--header-text-color);
+  left: -25px;
+}
+
+.section__content_box_paragraph {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-text-color);
+}
+
+/* /=================================== Section to the codes End  ========================================== \ */
+
+/* /=================================== Footer to the codes End  ========================================== \ */
+.footer {
+  margin: 150px 0 0 0;
+  width: 100%;
+}
+
+.footer__icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--main-text-color);
+  transition: all .2s linear;
+}
+
+.footer__icons i:hover {
+  color: var(--main-bg-link-color);
+}
+
+.footer__paragraph {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  margin: 25px 0 50px 0;
+  color: var(--main-text-color);
+}
+
+/* /=================================== Footer to the codes End  ========================================== \ */
+
+/* /=================================== Responsive to the codes Start  ========================================== \ */
+
+@media (max-width: 780px) {
+  .nav .nav__list .nav__item .nav__link {
+    color: var(--header-text-color);
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 0 15px;
+    display: none;
+    transition: all .2s linear;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+}
+
+@media (max-width: 507px) {
+  .container_header {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 415px) {
+  .container_header {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .section__content_box_title {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 44px;
+    color: var(--main-text-color);
+  }
+
+  .section__content_box_small_box_paragraph.active {
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--main-section-oclock-grey-color);
+    position: relative;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 5px;
+  }
+
+  .container_header {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 310px) {
+  .container {
+    padding: 0 5px;
+  }
+}
+
+/* /=================================== Responsive to the codes End  ========================================== \ */
+
+/* /=================================== Secret to the codes End  ========================================== \ */
+.secret__header {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--main-link-color);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: all .4s linear;
+}
+
+.secret__header_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.secret__header .fa-times {
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.secret__header .secret__header_list .secret__header_item .secret__header_link {
+  font-size: 25px;
+  text-align: center;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  font-family: sans-serif;
+  transition: all .2s linear;
+}
+
+.secret__header .secret__header_list .secret__header_item .secret__header_link.active {
+  color: var(--main-bg-link-color);
+}
+
+.secret__header .secret__header_list .secret__header_item .secret__header_link:hover {
+  color: var(--main-bg-link-color);
+}
+
+/* /=================================== Secret to the codes End  ========================================== \ */
